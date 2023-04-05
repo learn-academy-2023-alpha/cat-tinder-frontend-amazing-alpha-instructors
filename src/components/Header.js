@@ -1,5 +1,5 @@
 import React from 'react'
-import {Nav, NavItem, NavLink} from 'reactstrap'
+import { Nav, NavItem, NavLink } from 'reactstrap'
 import catLogo from '../assets/cat-logo.png'
 
 const Header = () => {

@@ -6,18 +6,20 @@ import {Card, CardBody, CardSubtitle, CardText, CardTitle, Button} from 'reactst
 const CatShow = ({cats}) => {
   const { id } = useParams()
   let selectedCat = cats.find(cat => cat.id === +id) 
-  console.log(selectedCat)
   return (
-    <>
+    <div className='cat-show-align'>
       {selectedCat && (
         <Card
+        className='cat-show'
         style={{
-          width: '100%'
+          width: '40%'
         }}
       >
         <img
           alt={selectedCat.name}
           src={selectedCat.image}
+          style={{
+          }}
         />
         <CardBody>
           <CardTitle tag="h5">
@@ -35,7 +37,7 @@ const CatShow = ({cats}) => {
         </CardBody>
       </Card>
       )}
-    </>
+    </div>
   )
 }
 

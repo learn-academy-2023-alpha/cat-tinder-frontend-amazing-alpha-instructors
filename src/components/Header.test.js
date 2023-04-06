@@ -10,8 +10,6 @@ describe("<Header />", () => {
         <Header />
       </BrowserRouter>
     )
-    // screen.debug()
-    // screen.logTestingPlaygroundURL()
     const image = screen.getByRole("img")
     expect(image).toHaveAttribute("src", catLogo)
   })

@@ -58,7 +58,7 @@ API RESTful Routes:
 User side:
 - Show
 - Edit
-- New
+- New - form
 
 ## Conditional Rendering
 Using the && sign:

@@ -110,3 +110,8 @@ input {
   display: flex;
   justify-content: center;
 }
+
+/* Cat New */
+.new-header {
+  padding: 40px;
+}

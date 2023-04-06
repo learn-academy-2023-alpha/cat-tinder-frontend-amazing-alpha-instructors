@@ -14,7 +14,7 @@ describe("<App />", () => {
     // screen.logTestingPlaygroundURL()
 
     // Act
-    const greeting = screen.getByText("Home")
+    const greeting = screen.getByText(/welcome to cat tinder!/i)
 
     // Assert
     expect(greeting).toBeInTheDocument()
@@ -29,7 +29,7 @@ describe("<App />", () => {
     )
 
     const heading = screen.getByRole('heading', {
-      name: /home/i
+      name: /welcome to cat tinder!/i
     })
     expect(heading).toBeInTheDocument()
   })

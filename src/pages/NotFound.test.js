@@ -9,7 +9,7 @@ describe("<NotFound />", () => {
         <NotFound />
       </BrowserRouter>
     )
-      screen.logTestingPlaygroundURL()
+      // screen.logTestingPlaygroundURL()
       const notFound = screen.getByRole('heading', {
         name: /oops! cat knocked this page off the table\./i
       })

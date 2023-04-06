@@ -1,5 +1,6 @@
 import React from 'react'
-import { Nav, NavItem, NavLink } from 'reactstrap'
+import { Nav, NavItem } from 'reactstrap'
+import { NavLink } from 'react-router-dom'
 import catLogo from '../assets/cat-logo.png'
 
 const Header = () => {

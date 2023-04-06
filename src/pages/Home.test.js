@@ -10,7 +10,7 @@ describe("<Home />", () => {
       </BrowserRouter>
     )
       const home = screen.getByRole('heading', {
-        name: /home/i
+        name: /welcome to cat tinder!/i
       })
       expect(home).toBeInTheDocument()
   })

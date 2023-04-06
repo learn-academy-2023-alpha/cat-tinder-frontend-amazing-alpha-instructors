@@ -37,3 +37,58 @@ Assert: Expecting a specific output based on arrange and act.
 ## Debugging Tools
 - screen.debug(): shows in your terminal all the nodes on the page rendering
 - screen.logTestingPlaygroundURL(): gives us a url that allows us to interact and find queries for our test
+
+
+# Read Functionality
+RESTful Routes
+  - Index - Read
+  - Show - Read
+  - New
+  - Create
+  - Edit
+  - Update
+  - Destroy
+
+API RESTful Routes:
+- Index
+- Create
+- Update
+- Destroy
+
+User side:
+- Show
+- Edit
+- New
+
+## Conditional Rendering
+Using the && sign:
+```javascript
+    {selectedCat && (
+            <Card
+            style={{
+              width: '100%'
+            }}
+          >
+            <img
+              alt={selectedCat.name}
+              src={selectedCat.image}
+            />
+            <CardBody>
+              <CardTitle tag="h5">
+                {selectedCat.name}
+              </CardTitle>
+              <CardSubtitle
+                className="mb-2 text-muted"
+                tag="h6"
+              >
+                Age: {selectedCat.age}
+              </CardSubtitle>
+              <CardText>
+                Enjoys {selectedCat.enjoys}
+              </CardText>
+            </CardBody>
+          </Card>
+      )}
+```
+selectedCat === true render
+else don't render yet

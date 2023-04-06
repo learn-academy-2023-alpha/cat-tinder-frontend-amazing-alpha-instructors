@@ -74,3 +74,9 @@ input {
   margin-top: 50px;
 }
 
+/* Index */
+.card-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

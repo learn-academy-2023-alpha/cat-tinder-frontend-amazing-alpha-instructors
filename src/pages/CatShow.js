@@ -1,8 +1,41 @@
+import { render } from '@testing-library/react'
 import React from 'react'
+import { useParams } from 'react-router-dom'
+import {Card, CardBody, CardSubtitle, CardText, CardTitle, Button} from 'reactstrap'
 
-const CatShow = () => {
+const CatShow = ({cats}) => {
+  const { id } = useParams()
+  let selectedCat = cats.find(cat => cat.id === +id) 
+  console.log(selectedCat)
   return (
-    <div>CatShow</div>
+    <>
+      {selectedCat && (
+        <Card
+        style={{
+          width: '100%'
+        }}
+      >
+        <img
+          alt={selectedCat.name}
+          src={selectedCat.image}
+        />
+        <CardBody>
+          <CardTitle tag="h5">
+            {selectedCat.name}
+          </CardTitle>
+          <CardSubtitle
+            className="mb-2 text-muted"
+            tag="h6"
+          >
+            Age: {selectedCat.age}
+          </CardSubtitle>
+          <CardText>
+            Enjoys {selectedCat.enjoys}
+          </CardText>
+        </CardBody>
+      </Card>
+      )}
+    </>
   )
 }
 
